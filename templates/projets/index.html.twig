@@ -12,7 +12,7 @@
 					<thead class="thead-dark"></thead>
 					<thead>
 						<tr>
-							<th>Id</th>
+							
 							<th>Name</th>
 							<th>Description</th>
 							<th>Starting_date</th>
@@ -24,7 +24,7 @@
 					<tbody>
 						{% for projet in projets %}
 							<tr>
-								<td>{{ projet.id }}</td>
+								
 								<td>{{ projet.name }}</td>
 								<td>{{ projet.Description }}</td>
 								<td>{{ projet.StartingDate ? projet.StartingDate|date('Y-m-d') : '' }}</td>

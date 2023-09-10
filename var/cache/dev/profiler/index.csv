@@ -891,3 +891,6 @@ b6db63,::1,POST,http://localhost:8080/,1694368616,,302
 d1eeac,::1,GET,http://localhost:8080/tasks/2,1694371820,,200
 79cf7b,::1,GET,http://localhost:8080/projets/?id=2,1694371846,,200
 2523a7,::1,GET,http://localhost:8080/projets/new,1694371873,,200
+93b0fc,::1,GET,http://localhost:8080/,1694375499,,200
+5a2732,::1,POST,http://localhost:8080/,1694375539,,302
+e3c893,::1,GET,http://localhost:8080/projets/,1694375540,,200
