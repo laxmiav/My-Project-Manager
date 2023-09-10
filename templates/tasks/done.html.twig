@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tasks index
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="mt-5">
+				<h1>Tasks index</h1>
+
+				{% set task = projectId %}
+					<a class="btn btn-ls btn-primary " href="{{ path('app_tasks_new',{'id': task}) }}">Create new</a>
+                <a class="btn btn-ls btn-primary" href="{{ path('app_tasks_index',{'id': task}) }}">Back to Ongoing tasks</a>
+				<div class="d-flex flex-row d-flex justify-content-around">
+				<div class="p-4">
+				<h3>Tasks Completed</h3>
+				<table class="table">
+					<thead class="thead-dark"></thead>
+					<tr>
+						
+						<th>Name</th>
+						<th>Description</th>
+						<th>Deadline_date</th>
+						<th>Priority</th>
+						
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for task in tasksDone %}
+						<tr>
+							
+							<td>{{ task.name }}</td>
+							<td>{{ task.Description }}</td>
+							<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
+							<td>{{ task.Priority }}</td>
+							
+							
+							<td>
+								<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Show</a>
+								
+								<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_inprogress', {'id': task.id}) }}">Change to in-progress</a>
+								
+							</td>
+						</tr>
+					{% else %}
+						<tr>
+							<td colspan="7">no records found</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			</div>
+			
+</div>
+			
+		</div>
+	</div>
+</div>
+{% endblock %}

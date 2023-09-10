@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tasks index
+{% endblock %}
+
+{% block body %}
+
+	<div class="d-flex flex-column flex-xl-row justify-content-lg-center m-4 fs-6">
+			<div class="mt-4 fs-6   ">
+			   
+					<h1>Tasks index</h1>
+
+					{% set task = projectId %}
+					<a class="btn btn-ls btn-primary " href="{{ path('app_tasks_new',{'id': task}) }}">Create new</a>
+
+					 <a class="btn btn-ls btn-primary" href="{{ path('app_tasks_indexDone',{'id': task}) }}">Completed tasks</a>
+					<a class="btn btn-ls btn-primary" href="{{ path('app_projets_index',{'id': task}) }}">Back to project</a>
+
+				
+				
+				
+				<div class="d-flex flex-column flex-xl-row d-flex justify-content-around">
+					<div class="p-4">
+						<h5>Tasks TODO</h5>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+						
+								<th>Name</th>
+								<th>Description</th>
+								<th>Deadline_date</th>
+								<th>Priority</th>
+						
+								<th>actions</th>
+								</tr>
+							</thead>
+							<tbody>
+									{% for task in tasks %}
+									<tr>
+							
+									<td>{{ task.name }}</td>
+									<td>{{ task.Description }}</td>
+									<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
+									<td>{{ task.Priority }}</td>
+							
+							
+									<td>
+									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Show</a>
+									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_edit', {'id': task.id}) }}">Edit</i></a>
+									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_inprogress', {'id': task.id}) }}">inprogress</a>
+								
+									</td>
+									</tr>
+									{% else %}
+									<tr>
+									<td colspan="7"><h5>Lets start creating your tasks</h5></td>
+									</tr>
+									{% endfor %}
+									</tbody>
+						</table>
+					</div>
+					<div class="p-4">
+						<h5>Tasks In-Progress</h5>
+							<table class="table">
+							<thead class="thead-dark">
+									<tr>
+						
+									<th>Name</th>
+									<th>Description</th>
+									<th>Deadline_date</th>
+									<th>Priority</th>
+						
+									<th>actions</th>
+									</tr>
+							</thead>
+							<tbody>
+									{% for task in tasksinprogress %}
+									<tr>
+							
+									<td>{{ task.Project.id }}</td>
+									<td>{{ task.Description }}</td>
+									<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
+									<td>{{ task.Priority }}</td>
+							
+							
+									<td>
+										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Show</a>
+										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_edit', {'id': task.id}) }}">Edit</i></a>
+										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_done', {'id': task.id}) }}">Done</a>
+								
+									</td>
+									</tr>
+									{% else %}
+									<tr>
+									<td colspan="7">No tasks in progress</td>
+									</tr>
+									{% endfor %}
+							</tbody>
+							</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+
+{% endblock %}
