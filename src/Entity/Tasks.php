@@ -32,6 +32,9 @@ class Tasks
     #[ORM\ManyToOne(inversedBy: 'tasks')]
     private ?Projets $Project = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $assign_to = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Tasks
     public function setProject(?Projets $Project): self
     {
         $this->Project = $Project;
+
+        return $this;
+    }
+
+    public function getAssignTo(): ?string
+    {
+        return $this->assign_to;
+    }
+
+    public function setAssignTo(?string $assign_to): self
+    {
+        $this->assign_to = $assign_to;
 
         return $this;
     }

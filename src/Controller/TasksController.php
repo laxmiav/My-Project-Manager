@@ -68,7 +68,12 @@ class TasksController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-           
+            $projet = $projetsRepository->findAllById($id);
+            foreach($projet as  $pt ){
+              $toll =  $pt;
+            }
+
+           $task->setProject($toll);
           $task->setStatus('1');
             $tasksRepository->save($task, true);
 
@@ -103,6 +108,7 @@ class TasksController extends AbstractController
     #[Route('/{id}/edit', name: 'app_tasks_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Tasks $task, TasksRepository $tasksRepository): Response
     {
+        $project = $task->getProject()->getId();
         $toll =  $task->getProject();
         if (!isset($toll )){
             throw new Exception("No Projects and Tasks were found", 1);
@@ -112,15 +118,18 @@ class TasksController extends AbstractController
 
         $form = $this->createForm(TasksType::class, $task);
         $form->handleRequest($request);
-        $project = $task->getProject()->getId();
+       
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $projectTask = $task->getProject();
+            $task->setProject($projectTask);
             $tasksRepository->save($task, true);
-
+            
             return $this->redirectToRoute('app_tasks_index', ['id'=> $project], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('tasks/edit.html.twig', [
+            
             'task' => $task,
             'form' => $form,
             'projectId' => $project,

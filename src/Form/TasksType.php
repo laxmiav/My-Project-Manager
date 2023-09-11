@@ -35,6 +35,9 @@ class TasksType extends AbstractType
                 'expanded'=>true,
                 'required'=>false
             ])
+            ->add('assign_to',TextType::class,[
+                'attr' => ['placeholder' => 'Myself or my teammate'],
+            ] )
             // ->add('Status',ChoiceType::class,[
             //     'choices'  => [
             //         'TODO' => '1',
@@ -44,14 +47,14 @@ class TasksType extends AbstractType
             //     ],
             //     'required'=>false
             // ])
-            ->add('Project',EntityType ::class ,[  
-                'class' => Projets::class,
-                'choice_label' => 'name',
-                'multiple'=>false,
-                'expanded'=>false,
+            // ->add('Project',EntityType ::class ,[  
+            //     'class' => Projets::class,
+            //     'choice_label' => 'name',
+            //     'multiple'=>false,
+            //     'expanded'=>false,
                 
                 
-                ])
+            //     ])
         ;
     }
 

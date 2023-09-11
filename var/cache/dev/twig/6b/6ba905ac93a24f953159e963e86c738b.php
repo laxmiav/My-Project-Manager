@@ -96,13 +96,16 @@ class __TwigTemplate_fa1989e97d3371d12a5d658be3d79236 extends Template
         echo twig_include($this->env, $context, "tasks/_form.html.twig", ["button_label" => "Update"]);
         echo "
                 </br>
-\t\t\t\t<a class=\"btn btn-ls btn-primary\" href=\"";
+\t\t\t\t";
         // line 14
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_index");
+        $context["task"] = (isset($context["projectId"]) || array_key_exists("projectId", $context) ? $context["projectId"] : (function () { throw new RuntimeError('Variable "projectId" does not exist.', 14, $this->source); })());
+        // line 15
+        echo "\t\t\t\t<a class=\"btn btn-ls btn-primary\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_index", ["id" => (isset($context["task"]) || array_key_exists("task", $context) ? $context["task"] : (function () { throw new RuntimeError('Variable "task" does not exist.', 15, $this->source); })())]), "html", null, true);
         echo "\">Back to list</a>
 
 \t\t\t\t";
-        // line 16
+        // line 17
         echo twig_include($this->env, $context, "tasks/_delete_form.html.twig");
         echo "
 \t\t\t</div>
@@ -129,7 +132,7 @@ class __TwigTemplate_fa1989e97d3371d12a5d658be3d79236 extends Template
 
     public function getDebugInfo()
     {
-        return array (  106 => 16,  101 => 14,  96 => 12,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  109 => 17,  103 => 15,  101 => 14,  96 => 12,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -147,13 +150,14 @@ class __TwigTemplate_fa1989e97d3371d12a5d658be3d79236 extends Template
 
 \t\t\t\t{{ include('tasks/_form.html.twig', {'button_label': 'Update'}) }}
                 </br>
-\t\t\t\t<a class=\"btn btn-ls btn-primary\" href=\"{{ path('app_tasks_index') }}\">Back to list</a>
+\t\t\t\t{% set task = projectId %}
+\t\t\t\t<a class=\"btn btn-ls btn-primary\" href=\"{{ path('app_tasks_index',{'id' : task}) }}\">Back to list</a>
 
 \t\t\t\t{{ include('tasks/_delete_form.html.twig') }}
 \t\t\t</div>
 \t\t</div>
 \t</div>
 {% endblock %}
-", "tasks/edit.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\project_manager\\templates\\tasks\\edit.html.twig");
+", "tasks/edit.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\My-Project-Manager\\templates\\tasks\\edit.html.twig");
     }
 }
