@@ -94,7 +94,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 \t\t\t\t\t<thead class=\"thead-dark\"></thead>
 \t\t\t\t\t<thead>
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>Id</th>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<th>Name</th>
 \t\t\t\t\t\t\t<th>Description</th>
 \t\t\t\t\t\t\t<th>Starting_date</th>
@@ -112,10 +112,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["projet"]) {
             // line 26
             echo "\t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["projet"], "id", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<td>";
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["projet"], "name", [], "any", false, false, false, 28), "html", null, true);
@@ -144,7 +141,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 \t\t\t\t\t\t\t\t\t<a href=\"";
             // line 38
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_projets_show", ["id" => twig_get_attribute($this->env, $this->source, $context["projet"], "id", [], "any", false, false, false, 38)]), "html", null, true);
-            echo "\">show</a>
+            echo "\">Detail</a>
 \t\t\t\t\t\t\t\t\t<a href=\"";
             // line 39
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_projets_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["projet"], "id", [], "any", false, false, false, 39)]), "html", null, true);
@@ -195,7 +192,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 
     public function getDebugInfo()
     {
-        return array (  172 => 49,  168 => 47,  159 => 43,  150 => 39,  146 => 38,  139 => 34,  133 => 31,  129 => 30,  125 => 29,  121 => 28,  117 => 27,  114 => 26,  109 => 25,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  169 => 49,  165 => 47,  156 => 43,  147 => 39,  143 => 38,  136 => 34,  130 => 31,  126 => 30,  122 => 29,  118 => 28,  114 => 26,  109 => 25,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -214,7 +211,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 \t\t\t\t\t<thead class=\"thead-dark\"></thead>
 \t\t\t\t\t<thead>
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>Id</th>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<th>Name</th>
 \t\t\t\t\t\t\t<th>Description</th>
 \t\t\t\t\t\t\t<th>Starting_date</th>
@@ -226,7 +223,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t{% for projet in projets %}
 \t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td>{{ projet.id }}</td>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<td>{{ projet.name }}</td>
 \t\t\t\t\t\t\t\t<td>{{ projet.Description }}</td>
 \t\t\t\t\t\t\t\t<td>{{ projet.StartingDate ? projet.StartingDate|date('Y-m-d') : '' }}</td>
@@ -237,7 +234,7 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_projets_show', {'id': projet.id}) }}\">show</a>
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_projets_show', {'id': projet.id}) }}\">Detail</a>
 \t\t\t\t\t\t\t\t\t<a href=\"{{ path('app_projets_edit', {'id': projet.id}) }}\">edit</a>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
@@ -253,6 +250,6 @@ class __TwigTemplate_7b3e13d990fe982215c1c38d5af46077 extends Template
 \t\t</div>
 \t</div>
 {% endblock %}
-", "projets/index.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\project_manager\\templates\\projets\\index.html.twig");
+", "projets/index.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\My-Project-Manager\\templates\\projets\\index.html.twig");
     }
 }

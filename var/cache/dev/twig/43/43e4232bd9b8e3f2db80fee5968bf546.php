@@ -119,8 +119,8 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t<thead class=\"thead-dark\">
 \t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<th>Name</th>
-\t\t\t\t\t\t\t\t<th>Description</th>
+\t\t\t\t\t\t\t\t<th>Task</th>
+\t\t\t\t\t\t\t\t<th>Assign_to</th>
 \t\t\t\t\t\t\t\t<th>Deadline_date</th>
 \t\t\t\t\t\t\t\t<th>Priority</th>
 \t\t\t\t\t\t
@@ -143,7 +143,7 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
             echo "</td>
 \t\t\t\t\t\t\t\t\t<td>";
             // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "Description", [], "any", false, false, false, 42), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "assignto", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t<td>";
             // line 43
@@ -159,7 +159,7 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"";
             // line 48
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_show", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 48)]), "html", null, true);
-            echo "\">Show</a>
+            echo "\">Detail</a>
 \t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 49)]), "html", null, true);
@@ -194,8 +194,8 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t<thead class=\"thead-dark\">
 \t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t<th>Name</th>
-\t\t\t\t\t\t\t\t\t<th>Description</th>
+\t\t\t\t\t\t\t\t\t<th>Task</th>
+\t\t\t\t\t\t\t\t\t<th>Assign_to</th>
 \t\t\t\t\t\t\t\t\t<th>Deadline_date</th>
 \t\t\t\t\t\t\t\t\t<th>Priority</th>
 \t\t\t\t\t\t
@@ -214,11 +214,11 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<td>";
             // line 80
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["task"], "Project", [], "any", false, false, false, 80), "id", [], "any", false, false, false, 80), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "name", [], "any", false, false, false, 80), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t<td>";
             // line 81
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "Description", [], "any", false, false, false, 81), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "assignto", [], "any", false, false, false, 81), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t<td>";
             // line 82
@@ -234,7 +234,7 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"";
             // line 87
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_show", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 87)]), "html", null, true);
-            echo "\">Show</a>
+            echo "\">Detail</a>
 \t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"";
             // line 88
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_tasks_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 88)]), "html", null, true);
@@ -322,8 +322,8 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t<thead class=\"thead-dark\">
 \t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<th>Name</th>
-\t\t\t\t\t\t\t\t<th>Description</th>
+\t\t\t\t\t\t\t\t<th>Task</th>
+\t\t\t\t\t\t\t\t<th>Assign_to</th>
 \t\t\t\t\t\t\t\t<th>Deadline_date</th>
 \t\t\t\t\t\t\t\t<th>Priority</th>
 \t\t\t\t\t\t
@@ -335,13 +335,13 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<td>{{ task.name }}</td>
-\t\t\t\t\t\t\t\t\t<td>{{ task.Description }}</td>
+\t\t\t\t\t\t\t\t\t<td>{{ task.assignto }}</td>
 \t\t\t\t\t\t\t\t\t<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
 \t\t\t\t\t\t\t\t\t<td>{{ task.Priority }}</td>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_show', {'id': task.id}) }}\">Show</a>
+\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_show', {'id': task.id}) }}\">Detail</a>
 \t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_edit', {'id': task.id}) }}\">Edit</i></a>
 \t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_inprogress', {'id': task.id}) }}\">inprogress</a>
 \t\t\t\t\t\t\t\t
@@ -361,8 +361,8 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t<thead class=\"thead-dark\">
 \t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t<th>Name</th>
-\t\t\t\t\t\t\t\t\t<th>Description</th>
+\t\t\t\t\t\t\t\t\t<th>Task</th>
+\t\t\t\t\t\t\t\t\t<th>Assign_to</th>
 \t\t\t\t\t\t\t\t\t<th>Deadline_date</th>
 \t\t\t\t\t\t\t\t\t<th>Priority</th>
 \t\t\t\t\t\t
@@ -373,14 +373,14 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t\t\t\t\t\t\t\t{% for task in tasksinprogress %}
 \t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t<td>{{ task.Project.id }}</td>
-\t\t\t\t\t\t\t\t\t<td>{{ task.Description }}</td>
+\t\t\t\t\t\t\t\t\t<td>{{ task.name }}</td>
+\t\t\t\t\t\t\t\t\t<td>{{ task.assignto }}</td>
 \t\t\t\t\t\t\t\t\t<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
 \t\t\t\t\t\t\t\t\t<td>{{ task.Priority }}</td>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_show', {'id': task.id}) }}\">Show</a>
+\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_show', {'id': task.id}) }}\">Detail</a>
 \t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_edit', {'id': task.id}) }}\">Edit</i></a>
 \t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-ls btn-primary\"  href=\"{{ path('app_tasks_done', {'id': task.id}) }}\">Done</a>
 \t\t\t\t\t\t\t\t
@@ -400,6 +400,6 @@ class __TwigTemplate_fc7ca886175a460e21ee936ff46e3eaa extends Template
 \t\t</div>\t
 
 {% endblock %}
-", "tasks/index.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\project_manager\\templates\\tasks\\index.html.twig");
+", "tasks/index.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\My-Project-Manager\\templates\\tasks\\index.html.twig");
     }
 }

@@ -26,8 +26,8 @@
 							<thead class="thead-dark">
 								<tr>
 						
-								<th>Name</th>
-								<th>Description</th>
+								<th>Task</th>
+								<th>Assign_to</th>
 								<th>Deadline_date</th>
 								<th>Priority</th>
 						
@@ -39,13 +39,13 @@
 									<tr>
 							
 									<td>{{ task.name }}</td>
-									<td>{{ task.Description }}</td>
+									<td>{{ task.assignto }}</td>
 									<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
 									<td>{{ task.Priority }}</td>
 							
 							
 									<td>
-									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Show</a>
+									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Detail</a>
 									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_edit', {'id': task.id}) }}">Edit</i></a>
 									<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_inprogress', {'id': task.id}) }}">inprogress</a>
 								
@@ -65,8 +65,8 @@
 							<thead class="thead-dark">
 									<tr>
 						
-									<th>Name</th>
-									<th>Description</th>
+									<th>Task</th>
+									<th>Assign_to</th>
 									<th>Deadline_date</th>
 									<th>Priority</th>
 						
@@ -77,14 +77,14 @@
 									{% for task in tasksinprogress %}
 									<tr>
 							
-									<td>{{ task.Project.id }}</td>
-									<td>{{ task.Description }}</td>
+									<td>{{ task.name }}</td>
+									<td>{{ task.assignto }}</td>
 									<td>{{ task.DeadlineDate ? task.DeadlineDate|date('Y-m-d') : '' }}</td>
 									<td>{{ task.Priority }}</td>
 							
 							
 									<td>
-										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Show</a>
+										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_show', {'id': task.id}) }}">Detail</a>
 										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_edit', {'id': task.id}) }}">Edit</i></a>
 										<a class="btn btn-ls btn-primary"  href="{{ path('app_tasks_done', {'id': task.id}) }}">Done</a>
 								
