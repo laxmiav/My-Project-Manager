@@ -5,14 +5,14 @@
 
 {% block body %}
 	<div class="container">
-		<div class="row justify-content-md-center">
-			<div class="mt-5">
+		<div class="row">
+			<div class="col-md-6 mt-5 offset-md-3">
 				<h1>Edit Tasks</h1>
 
 				{{ include('tasks/_form.html.twig', {'button_label': 'Update'}) }}
                 </br>
-				{% set task = projectId %}
-				<a class="btn btn-ls btn-primary" href="{{ path('app_tasks_index',{'id' : task}) }}">Back to list</a>
+				{# {% set task = projectId %} #}
+				<a class="btn btn-ls btn-primary" href="{{ path('app_tasks_index',{'id' : task.Project.id}) }}">Back to list</a>
 
 				{{ include('tasks/_delete_form.html.twig') }}
 			</div>

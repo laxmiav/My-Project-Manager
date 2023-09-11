@@ -94,56 +94,50 @@ class __TwigTemplate_24876d9dbcdffa234d00010d23b56cdd extends Template
 \t\t\t\t<table class=\"table\">
 \t\t\t\t\t<thead class=\"thead-dark\"></thead>
 \t\t\t\t\t<tbody>
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>Id</th>
-\t\t\t\t\t\t\t<td>";
-        // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 17, $this->source); })()), "id", [], "any", false, false, false, 17), "html", null, true);
-        echo "</td>
-\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>Name</th>
 \t\t\t\t\t\t\t<td>";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 21, $this->source); })()), "name", [], "any", false, false, false, 21), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 18, $this->source); })()), "name", [], "any", false, false, false, 18), "html", null, true);
         echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>Description</th>
 \t\t\t\t\t\t\t<td>";
-        // line 25
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 25, $this->source); })()), "Description", [], "any", false, false, false, 25), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 22, $this->source); })()), "Description", [], "any", false, false, false, 22), "html", null, true);
         echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>Starting_date</th>
 \t\t\t\t\t\t\t<td>";
-        // line 29
-        ((twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 29, $this->source); })()), "StartingDate", [], "any", false, false, false, 29)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 29, $this->source); })()), "StartingDate", [], "any", false, false, false, 29), "Y-m-d"), "html", null, true))) : (print ("")));
+        // line 26
+        ((twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 26, $this->source); })()), "StartingDate", [], "any", false, false, false, 26)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 26, $this->source); })()), "StartingDate", [], "any", false, false, false, 26), "Y-m-d"), "html", null, true))) : (print ("")));
         echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>Deadline_date</th>
 \t\t\t\t\t\t\t<td>";
-        // line 33
-        ((twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 33, $this->source); })()), "DeadlineDate", [], "any", false, false, false, 33)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 33, $this->source); })()), "DeadlineDate", [], "any", false, false, false, 33), "Y-m-d"), "html", null, true))) : (print ("")));
+        // line 30
+        ((twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 30, $this->source); })()), "DeadlineDate", [], "any", false, false, false, 30)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 30, $this->source); })()), "DeadlineDate", [], "any", false, false, false, 30), "Y-m-d"), "html", null, true))) : (print ("")));
         echo "</td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</tbody>
 \t\t\t\t</table>
 
 \t\t\t\t<a class=\"btn btn-ls btn-primary\" href=\"";
-        // line 38
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_projets_index");
         echo "\">Back to list</a>
 
 \t\t\t\t<a class=\"btn btn-ls btn-primary\"href=\"";
-        // line 40
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_projets_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 40, $this->source); })()), "id", [], "any", false, false, false, 40)]), "html", null, true);
+        // line 37
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_projets_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["projet"]) || array_key_exists("projet", $context) ? $context["projet"] : (function () { throw new RuntimeError('Variable "projet" does not exist.', 37, $this->source); })()), "id", [], "any", false, false, false, 37)]), "html", null, true);
         echo "\">Edit</a>
 
 \t\t\t\t";
-        // line 42
+        // line 39
         echo twig_include($this->env, $context, "projets/_delete_form.html.twig");
         echo "
 \t\t\t</div>
@@ -170,7 +164,7 @@ class __TwigTemplate_24876d9dbcdffa234d00010d23b56cdd extends Template
 
     public function getDebugInfo()
     {
-        return array (  147 => 42,  142 => 40,  137 => 38,  129 => 33,  122 => 29,  115 => 25,  108 => 21,  101 => 17,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  141 => 39,  136 => 37,  131 => 35,  123 => 30,  116 => 26,  109 => 22,  102 => 18,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -189,10 +183,7 @@ class __TwigTemplate_24876d9dbcdffa234d00010d23b56cdd extends Template
 \t\t\t\t<table class=\"table\">
 \t\t\t\t\t<thead class=\"thead-dark\"></thead>
 \t\t\t\t\t<tbody>
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>Id</th>
-\t\t\t\t\t\t\t<td>{{ projet.id }}</td>
-\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>Name</th>
 \t\t\t\t\t\t\t<td>{{ projet.name }}</td>
@@ -221,6 +212,6 @@ class __TwigTemplate_24876d9dbcdffa234d00010d23b56cdd extends Template
 \t\t</div>
 \t</div>
 {% endblock %}
-", "projets/show.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\project_manager\\templates\\projets\\show.html.twig");
+", "projets/show.html.twig", "C:\\Users\\ADMIN\\Desktop\\Symfony-projects\\My-Project-Manager\\templates\\projets\\show.html.twig");
     }
 }
