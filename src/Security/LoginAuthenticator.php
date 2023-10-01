@@ -28,6 +28,19 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
     public function authenticate(Request $request): Passport
     {
         $email = $request->request->get('email', '');
+        /**
+     * {@inheritdoc}
+     *
+     * Override to change the request conditions that have to be
+     * matched in order to handle the login form submit.
+     *
+     * This default implementation handles all POST requests to the
+     * login path (@see getLoginUrl()).
+     */
+    public function supports(Request $request): bool
+    {
+       return $request->isMethod('POST') && $this->getLoginUrl($request) === $request->getRequestUri();
+    }
 
         $request->getSession()->set(Security::LAST_USERNAME, $email);
 
