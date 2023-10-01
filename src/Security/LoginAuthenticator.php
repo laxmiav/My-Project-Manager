@@ -25,10 +25,7 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
     {
     }
 
-    public function authenticate(Request $request): Passport
-    {
-        $email = $request->request->get('email', '');
-        /**
+       /**
      * {@inheritdoc}
      *
      * Override to change the request conditions that have to be
@@ -41,6 +38,10 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
     {
        return $request->isMethod('POST') && $this->getLoginUrl($request) === $request->getRequestUri();
     }
+
+    public function authenticate(Request $request): Passport
+    {
+        $email = $request->request->get('email', '');
 
         $request->getSession()->set(Security::LAST_USERNAME, $email);
 
